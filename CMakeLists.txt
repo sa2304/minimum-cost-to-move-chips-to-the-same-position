@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.21)
+project(minimum_cost_to_move_chips_to_the_same_position)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(minimum_cost_to_move_chips_to_the_same_position main.cpp)
