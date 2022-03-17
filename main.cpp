@@ -1,14 +1,25 @@
 #include <cassert>
 #include <iostream>
+#include <map>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
  public:
   int minCostToMoveChips(vector<int>& position) {
-    // FIXME
-    return 0;
+    int odd_chips_count = 0;
+    int even_chips_count = 0;
+    for (int pos: position) {
+      if (0 == pos % 2) {
+        ++even_chips_count;
+      } else {
+        ++odd_chips_count;
+      }
+    }
+
+    return min(even_chips_count, odd_chips_count);
   }
 };
 
